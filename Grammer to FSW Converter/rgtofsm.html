@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2CS601 Theory-of-Computation</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha512-9BwLAVqqt6oFdXohPLuNHxhx36BVj5uGSGmizkmGkgl3uMSgNalKc/smum+GJU/TTP0jy0+ruwC3xNAk3F759A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <script type="text/javascript" src="js/check2.js"></script>
+        <script type="text/javascript" src="js/clear.js"></script>
+        <script type="text/javascript" src="js/dfa.js"></script>
+        <script type="text/javascript" src="js/mdfa.js"></script>
+        <script type="text/javascript" src="js/nfawe.js"></script>
+        <script type="text/javascript" src="js/read.js"></script>
+        <script type="text/javascript" src="js/replace.js"></script>
+        <script type="text/javascript" src="js/rg2.js"></script>
+        <script type="text/javascript" src="js/test.js"></script>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html">Theory of Computation (Innovative Assignment)</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="rgtofsm.html">RG to FSM</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-5">
+                <h3>Regular Grammar (Input)</h3>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="row">
+                            <textarea id="myTextArea" rows="10" cols="40" justify-content="center">
+    A -> 0C|B
+    B -> 0A|e
+    C -> 0B|1B|1C  
+                                </textarea>
+                        </div>
+                        <div class="row m-3">
+                            <div class="col-5">
+                                <button
+                                    onClick="document.getElementById('myFile').click(); read(); ">Import</button>&emsp;&emsp;
+                                <input type="file" id="myFile" style="display: none;">
+                            </div>
+                            <div class="col-5">
+                                <button id="clear" onClick="clearIt()">Clear</button>
+                                <p id="demo"></p>
+                            </div>
+                        </div>
+                        <div class="row px-lg-5">
+                            <div class="pos">
+                                <button style="width:100px;" onClick="nfa2()">NFA</button><br><br>
+                                <button style="width:100px;" onClick="eClosure()">NFA w/o e</button><br><br>
+                                <button style="width:100px;" onClick="dfa()">DFA</button><br><br>
+                                <button style="width:100px;" onClick="mdfa()">Min DFA</button><br><br>
+                                <button style="width:100px;" onClick="test()">Test</button><br><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-8" id="rcorners2">
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

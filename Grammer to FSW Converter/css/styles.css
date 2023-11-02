@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-style: normal;
+    user-select: none;
+    --transition-speed: 0.6s;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: black;
+}
+
+#rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #000000;
+    padding: 20px;
+    /* width: 100%; */
+    height: 90vh;
+    text-align: left;
+    display: inline-block;
+}
+
+.tabl2 {
+    float: left;
+    width: 20%;
+    margin-inline: 3em;
+}
+
+.tabl {
+    float: left;
+    width: 20%;
+    margin-inline: 3em;
+}
+
+.tabl3 {
+    float: left;
+    width: 20%;
+    margin-inline: 3em;
+}
+
+.tabl4 {
+    float: left;
+    width: 20%;
+    margin-inline: 3em;
+}
+
+.tabl5 {
+    float: left;
+    width: 20%;
+    margin-inline: 3em;
+}
+
+table,
+td,
+tr {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 40%;
+    table-layout: fixed;
+    text-align: center;
+}
+
+table {
+    float: right;
+}
+
+textarea {
+    border: 3px solid black;
+    resize: none;
+}
+
+#disp1 {
+    float: left;
+}
+
+#disp2 {
+    float: left;
+}
